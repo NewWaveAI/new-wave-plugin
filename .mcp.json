@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "newwave": {
+      "type": "http",
+      "url": "https://api.new-wave.ai/mcp"
+    }
+  }
+}

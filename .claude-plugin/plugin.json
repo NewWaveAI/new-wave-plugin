@@ -1,0 +1,13 @@
+{
+  "name": "newwave",
+  "displayName": "NewWave",
+  "version": "1.0.0",
+  "description": "Manage UGC campaigns, review creator work, research content, and analyze performance through your NewWave workspace.",
+  "author": {
+    "name": "NewWave",
+    "email": "support@new-wave.ai",
+    "url": "https://www.new-wave.ai"
+  },
+  "homepage": "https://www.new-wave.ai/mcp",
+  "keywords": ["ugc", "creator-marketing", "campaigns", "analytics", "mcp"]
+}
