@@ -9,5 +9,6 @@
     "url": "https://www.new-wave.ai"
   },
   "homepage": "https://www.new-wave.ai/mcp",
+  "repository": "https://github.com/NewWaveAI/new-wave-plugin",
   "keywords": ["ugc", "creator-marketing", "campaigns", "analytics", "mcp"]
 }

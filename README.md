@@ -6,7 +6,7 @@ Use your NewWave brand workspace from Claude to plan campaigns, review creator w
 
 - An OAuth connection to NewWave's hosted MCP server.
 - The **use-newwave** skill, a short guide to finding your workspace and using NewWave's campaign tools.
-- A marketplace catalog for installing the plugin from a downloaded copy of this repository.
+- A marketplace catalog for installing the plugin from this repository.
 
 ## Requirements
 
@@ -14,16 +14,16 @@ A NewWave account with access to a brand workspace. The service uses your existi
 
 ## Install in Claude Code
 
-Download or clone this repository. In Claude Code, add its local folder and install NewWave:
+In Claude Code, add the NewWave marketplace and install the plugin:
 
 ```text
-/plugin marketplace add /absolute/path/to/newwave-claude-plugin
+/plugin marketplace add NewWaveAI/new-wave-plugin
 /plugin install newwave@newwave-plugins
 ```
 
 Restart Claude Code after installation, then open `/mcp`, choose NewWave, and complete the NewWave OAuth sign-in flow. Your NewWave role controls which workspaces and actions you can access.
 
-For a temporary development session, run `claude --plugin-dir /absolute/path/to/newwave-claude-plugin` instead.
+For a temporary development session, clone this repository and run `claude --plugin-dir /absolute/path/to/new-wave-plugin` instead.
 
 ## Use NewWave
 
