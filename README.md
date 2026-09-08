@@ -1,37 +1,48 @@
 # NewWave for Claude
 
-Connect Claude to your NewWave brand workspace to plan and operate user-generated content campaigns.
+Use your NewWave brand workspace from Claude to plan campaigns, review creator work, and understand results.
 
-## What you can do
+## Included
 
-- Research content ideas and develop campaign briefs and scripts.
-- Prepare campaigns and review creator applications and submissions.
-- Analyze campaign results and creator performance.
-- Prepare communication with your creators.
+- An OAuth connection to NewWave's hosted MCP server.
+- The **use-newwave** skill, a short guide to finding your workspace and using NewWave's campaign tools.
+- A marketplace catalog for installing the plugin from a downloaded copy of this repository.
 
 ## Requirements
 
 A NewWave account with access to a brand workspace. The service uses your existing workspace permissions. NewWave account and plan requirements apply.
 
-## Try the plugin in Claude Code
+## Install in Claude Code
 
-Download this plugin directory, then run:
+Download or clone this repository. In Claude Code, add its local folder and install NewWave:
 
-```sh
-claude --plugin-dir /absolute/path/to/newwave-claude-plugin
+```text
+/plugin marketplace add /absolute/path/to/newwave-claude-plugin
+/plugin install newwave@newwave-plugins
 ```
 
-Open `/mcp`, choose the NewWave server, and complete the NewWave OAuth sign-in flow. Authentication takes place with NewWave; the plugin does not contain passwords or API keys.
+Restart Claude Code after installation, then open `/mcp`, choose NewWave, and complete the NewWave OAuth sign-in flow. Your NewWave role controls which workspaces and actions you can access.
 
-The bundled MCP connection uses Streamable HTTP at `https://api.new-wave.ai/mcp`. There are no local programs, hooks, or package dependencies to install.
+For a temporary development session, run `claude --plugin-dir /absolute/path/to/newwave-claude-plugin` instead.
 
-## Example prompts
+## Use NewWave
 
-- "Show me the campaigns in my NewWave workspace and summarize their recent performance. Keep this read-only."
-- "Compare applicants for my campaign, explain their strengths, and prepare a shortlist for me to review."
-- "Help draft a campaign brief and filming script for my next product launch."
+Ask Claude about NewWave or invoke `/newwave:use-newwave`. Name the workspace or campaign, the outcome you want, and whether you want a review or a change.
 
-Ask Claude to show you proposed changes before approving creators, sending messages, deleting content, or taking payment-related actions. Use NewWave's analytics tools for reported metrics.
+- "In NewWave, summarize our launch campaign for the past week, with links to the strongest videos. Read only."
+- "Review applicants for our summer campaign and prepare recommendations for me to check."
+- "Help me outline a creator brief for our new app. Keep it in this chat while we work on it."
+- "Draft feedback on this campaign's pending submissions for me to review."
+
+NewWave's [public prompt library](https://docs.new-wave.ai/ai-assistant/prompt-library) has more workflow examples.
+
+## Connection and data
+
+The MCP server URL is `https://api.new-wave.ai/mcp`, using Streamable HTTP. Sign-in takes place with NewWave. Credentials are managed by the MCP client; none are bundled with this plugin. The package contains text and JSON configuration and has no executable hooks or local server dependencies.
+
+Connected assistants can act through your NewWave account. Review proposed creator-facing messages, approvals, destructive changes, and payment-related actions before authorizing them.
+
+If the connection requires authentication, reopen `/mcp` and complete sign-in. For a missing workspace or denied action, check that the signed-in account has the expected workspace access.
 
 ## Links
 
