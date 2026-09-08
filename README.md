@@ -1,12 +1,12 @@
-# NewWave for Claude
+# NewWave for Claude and Codex
 
-Use your NewWave brand workspace from Claude to plan campaigns, review creator work, and understand results.
+Use your NewWave brand workspace from Claude or Codex to plan campaigns, review creator work, and understand results.
 
 ## Included
 
 - An OAuth connection to NewWave's hosted MCP server.
 - The **use-newwave** skill, a short guide to finding your workspace and using NewWave's campaign tools.
-- A marketplace catalog for installing the plugin from this repository.
+- Marketplace catalogs for installing the same plugin in Claude Code and Codex.
 
 ## Requirements
 
@@ -23,11 +23,30 @@ In Claude Code, add the NewWave marketplace and install the plugin:
 
 Restart Claude Code after installation, then open `/mcp`, choose NewWave, and complete the NewWave OAuth sign-in flow. Your NewWave role controls which workspaces and actions you can access.
 
-For a temporary development session, clone this repository and run `claude --plugin-dir /absolute/path/to/new-wave-plugin` instead.
+For a temporary development session, clone this repository and run `claude --plugin-dir /absolute/path/to/new-wave-plugin/plugins/newwave` instead.
+
+## Install in Codex
+
+Using the Codex CLI:
+
+```sh
+codex plugin marketplace add NewWaveAI/new-wave-plugin
+codex plugin add newwave@newwave-plugins
+```
+
+Open a new Codex task after installation. Complete NewWave sign-in through the plugin's connection controls when prompted, then ask Codex to use NewWave.
+
+For a local checkout, pass the repository folder to `codex plugin marketplace add` in place of the GitHub repository name. See [OpenAI's plugin packaging guide](https://developers.openai.com/plugins/build/plugins) for supported installation surfaces.
+
+## Package layout
+
+The shared plugin is in `plugins/newwave/`. Its Claude and Codex manifests use the same `.mcp.json` connection and `skills/use-newwave/SKILL.md` guide. Each host has a marketplace catalog at the repository root.
+
+For a directory submission that asks for the path inside this repository, use `plugins/newwave`.
 
 ## Use NewWave
 
-Ask Claude about NewWave or invoke `/newwave:use-newwave`. Name the workspace or campaign, the outcome you want, and whether you want a review or a change.
+Ask your assistant to use NewWave. In Claude Code, you can also invoke `/newwave:use-newwave`. Name the workspace or campaign, the outcome you want, and whether you want a review or a change.
 
 - "In NewWave, summarize our launch campaign for the past week, with links to the strongest videos. Read only."
 - "Review applicants for our summer campaign and prepare recommendations for me to check."
@@ -42,7 +61,7 @@ The MCP server URL is `https://api.new-wave.ai/mcp`, using Streamable HTTP. Sign
 
 Connected assistants can act through your NewWave account. Review proposed creator-facing messages, approvals, destructive changes, and payment-related actions before authorizing them.
 
-If the connection requires authentication, reopen `/mcp` and complete sign-in. For a missing workspace or denied action, check that the signed-in account has the expected workspace access.
+If the connection requires authentication, use `/mcp` in Claude Code or NewWave's connection controls in Codex to complete sign-in. For a missing workspace or denied action, check that the signed-in account has the expected workspace access.
 
 ## Links
 

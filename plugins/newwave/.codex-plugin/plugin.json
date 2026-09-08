@@ -1,0 +1,31 @@
+{
+  "name": "newwave",
+  "version": "1.1.0",
+  "description": "Connect to NewWave and get practical help with campaign briefs, creator reviews, content ideas, and performance reports.",
+  "author": {
+    "name": "NewWave",
+    "email": "support@new-wave.ai",
+    "url": "https://www.new-wave.ai"
+  },
+  "homepage": "https://www.new-wave.ai/mcp",
+  "repository": "https://github.com/NewWaveAI/new-wave-plugin",
+  "keywords": ["ugc", "creator-marketing", "campaigns", "analytics", "mcp"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "NewWave",
+    "shortDescription": "Plan creator campaigns and review results in NewWave.",
+    "longDescription": "Connect your NewWave brand workspace to plan campaigns, review creator work, develop content ideas, and report on performance. Includes an MCP connection and a practical usage guide. A NewWave account with workspace access is required.",
+    "developerName": "NewWave",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://www.new-wave.ai",
+    "privacyPolicyURL": "https://www.new-wave.ai/privacy",
+    "termsOfServiceURL": "https://www.new-wave.ai/terms",
+    "defaultPrompt": [
+      "Summarize my NewWave campaign results. Read only.",
+      "Review my NewWave applicants and recommend a shortlist.",
+      "Help draft a creator brief for my NewWave campaign."
+    ]
+  },
+  "mcpServers": "./.mcp.json"
+}

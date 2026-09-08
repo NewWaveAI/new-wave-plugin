@@ -9,7 +9,7 @@ NewWave helps brands run user-generated content campaigns with creators. Use the
 
 ## Get connected
 
-This plugin connects to `https://api.new-wave.ai/mcp` over Streamable HTTP. In Claude Code, open `/mcp`, select the NewWave connection, and follow the OAuth sign-in flow. Users need a NewWave account with access to a brand workspace. Account setup is available at https://app.new-wave.ai/signup.
+This plugin connects to `https://api.new-wave.ai/mcp` over Streamable HTTP. Use the host's connection controls to complete NewWave's OAuth sign-in flow. In Claude Code, open `/mcp` and select NewWave. In Codex, open the installed NewWave plugin and follow its connection or authentication controls. Users need a NewWave account with access to a brand workspace. Account setup is available at https://app.new-wave.ai/signup.
 
 If the connection needs authentication, direct the user to the sign-in flow. If access is denied or no workspace is available, explain the returned result and help the user check their account and workspace access.
 

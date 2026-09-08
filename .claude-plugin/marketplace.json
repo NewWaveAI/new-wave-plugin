@@ -1,6 +1,6 @@
 {
   "name": "newwave-plugins",
-  "description": "NewWave's MCP connection and practical usage guide for Claude.",
+  "description": "NewWave's MCP connection and practical usage guide.",
   "owner": {
     "name": "NewWave",
     "email": "support@new-wave.ai"
@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "newwave",
-      "source": "./",
+      "source": "./plugins/newwave",
       "category": "productivity"
     }
   ]

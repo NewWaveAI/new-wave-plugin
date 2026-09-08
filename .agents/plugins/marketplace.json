@@ -1,0 +1,20 @@
+{
+  "name": "newwave-plugins",
+  "interface": {
+    "displayName": "NewWave"
+  },
+  "plugins": [
+    {
+      "name": "newwave",
+      "source": {
+        "source": "local",
+        "path": "./plugins/newwave"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
